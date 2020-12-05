@@ -1,3 +1,55 @@
 ---
 ---
-@import "main";
+.current {
+  color: green;
+}
+
+.ugh {
+  float: right;
+  margin: 10px;
+  padding: 10px;
+  font-size: 110%;
+}
+
+body {
+    font-family: serif;
+    margin: 0;
+    word-wrap: break-word;
+
+}
+
+.header {
+    margin:0px;
+    padding: 30px;
+    background-color: cadetblue;
+    color: white;
+    font-size: 150%;
+}
+.header h1 {
+    font-size: 150%;
+}
+.header p {
+    font-size: 70%;
+    margin-top: 0px;
+}
+.AboutMe {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    font-size: 80%;
+    display: block;
+}
+
+.box {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.box img {
+    border: 5px solid cadetblue;
+    max-width: 100%;
+
+}
