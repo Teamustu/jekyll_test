@@ -1,3 +1,11 @@
+body {
+    font-family: serif;
+    margin: 0;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+
 .current {
   color: green;
 }
@@ -9,12 +17,6 @@
   font-size: 110%;
 }
 
-body {
-    font-family: serif;
-    margin: 0;
-    word-wrap: break-word;
-
-}
 
 .header {
     margin:0px;
