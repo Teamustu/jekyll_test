@@ -1,7 +1,18 @@
-<div class="ugh">
-  <nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-end">
+  <ul class="navbar-nav">
     {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+      <li class="nav-item">
+        <a class ="nav-link navbar-text" href="{{ item.link }}"{% if page.url == item.link %}style="color: red;"{% endif %}>{{ item.name }}</a>
+      </li>
     {% endfor %}
-  </nav>
-</div>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown Link</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        {% for item in site.data.navdropdown %}
+          <a class="dropdown-item" href="{{ item.link }}">{{ item.name }}</a>
+        {% endfor %}
+      </div>
+    </li>
+  </ul>
+</nav>
+

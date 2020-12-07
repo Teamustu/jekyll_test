@@ -1,0 +1,27 @@
+<!-- code for collapsable navbar -->
+<div class="fixed-top">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <ul class="navbar-nav">
+          {% for item in site.data.navigation %}
+            <li class="nav-item">
+              <a class ="nav-link navbar-text" href="{{ item.link }}"{% if page.url == item.link %}style="color: red;"{% endif %}>{{ item.name }}</a>
+            </li>
+          {% endfor %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown Link</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              {% for item in site.data.navdropdown %}
+                <a class="dropdown-item" href="{{ item.link }}">{{ item.name }}</a>
+              {% endfor %}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark justify-content-end">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
